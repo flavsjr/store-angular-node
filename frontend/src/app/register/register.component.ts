@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router'; // Importando diretamente aqui
-
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
+  imports: [FormsModule, CommonModule, HttpClientModule],
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule, RouterModule],
 })
-export class LoginComponent {
+export class RegisterComponent {
+  name: string = '';
   email: string = '';
   password: string = '';
+  confirmPassword: string = '';
   loginError: boolean = false;
   loginSuccess: boolean = false;
 
